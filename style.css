@@ -1,0 +1,98 @@
+/* style.css */
+:root {
+    --primary-color: #0f172a; /* Deep Navy */
+    --accent-color: #3b82f6;  /* Bright Blue */
+    --text-color: #334155;    /* Dark Gray */
+    --light-bg: #f8fafc;      /* Very Light Gray */
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigation */
+header {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo { font-size: 1.5rem; font-weight: bold; }
+
+.nav-links { list-style: none; display: flex; gap: 20px; }
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--accent-color); }
+
+/* Main Layout */
+main {
+    flex: 1; /* Pushes footer down */
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Hero Section (For Home Page) */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero h1 { font-size: 3rem; color: var(--primary-color); margin-bottom: 1rem; }
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--white);
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Card Grid (For Services/Team) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
